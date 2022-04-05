@@ -36,8 +36,9 @@ echo '</script>';
 }, 999 );
 
 function insert_products() {
+	
 	for ( $i = 1; $i < 9 ; $i++ ) { 
-		$ch = curl_init( 'https://syscallglobal.com/wp-json/wp/v2/pages/?page=' . $i );
+		$ch = curl_init( 'https://example.com/wp-json/wp/v2/pages/?page=' . $i );
 		curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
 		curl_setopt( $ch, CURLOPT_BINARYTRANSFER, true );
 		$output = curl_exec( $ch );
